@@ -1,5 +1,5 @@
 def task_1():
-	with open("src/input4.txt") as f:
+	with open("resources/inputFiles/input4.txt") as f:
 		lines = f.readlines()
 
 		count = 0
@@ -22,7 +22,7 @@ def checkForCompleteOverlap(s1,e1,s2,e2):
 	return (s1 <= s2 and e1 >= e2) or (s2 <= s1 and e2 >= e1)
 
 def task_2():
-	with open("src/input4.txt") as f:
+	with open("resources/inputFiles/input4.txt") as f:
 		lines = f.readlines()
 		count = 0
 

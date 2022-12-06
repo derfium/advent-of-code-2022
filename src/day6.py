@@ -1,5 +1,5 @@
 def task_1():
-    with open("src/input6.txt") as f:
+    with open("resources/inputFiles/input6.txt") as f:
         line = f.readline().replace("\n", "")
         
         for i, _ in enumerate(line, start=4):
@@ -11,7 +11,7 @@ def task_1():
         return -1
     
 def task_2():
-    with open("src/input6.txt") as f:
+    with open("resources/inputFiles/input6.txt") as f:
         line = f.readline().replace("\n", "")
         
         startOfPacket = task_1()

@@ -1,5 +1,5 @@
 def task_1(reverse):
-    with open("src/input5.txt") as f:
+    with open("resources/inputFiles/input5.txt") as f:
         lines = f.readlines()
         
         stack = fillStacks(lines)
@@ -87,7 +87,7 @@ def getSetupInput(lines):
         
 
 def task_2():
-    with open("src/input5.txt") as f:
+    with open("resources/inputFiles/input5.txt") as f:
         pass
 
 

@@ -1,5 +1,5 @@
 def task_1():
-  with open("src/input3.txt") as f:
+  with open("resources/inputFiles/input3.txt") as f:
     lines = f.readlines()
     prio = 0
 
@@ -18,7 +18,7 @@ def task_1():
 
 
 def task_2():
-  with open("src/input3.txt") as f:
+  with open("resources/inputFiles/input3.txt") as f:
     lines = f.readlines()
     prio = 0
     

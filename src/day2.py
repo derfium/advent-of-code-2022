@@ -1,5 +1,5 @@
 def task_1():
-  with open("src/input2.txt") as f:
+  with open("resources/inputFiles/input2.txt") as f:
     a = f.readlines()
     
     overallPoints = 0
@@ -22,7 +22,7 @@ def task_1():
       
 
 def task_2():
-  with open("src/input2.txt") as f:
+  with open("resources/inputFiles/input2.txt") as f:
     lines = f.readlines()
     overallPoints = 0
     
