@@ -79,7 +79,7 @@ def sumFiles(folder: Folder) -> int:
     return size
 
 def buildName(parentFolder: Folder, folder: Folder) -> str:
-    return parentFolder.name + "-" + folder.name
+    return (parentFolder.name if parentFolder.name != "/" else "") + "/" + folder.name
             
 
 def task_2():
@@ -99,6 +99,7 @@ def task_2():
         
         smallestSpace = sys.maxsize
         for _, space in folderSizes.items():
+            print(_)
             if space >= neededSpace:
                 if space < smallestSpace:
                     smallestSpace = space
