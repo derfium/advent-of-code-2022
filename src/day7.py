@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import List
 import sys
 
+
 @dataclass
 class Folder:
     name: str
@@ -78,6 +79,7 @@ def sumFiles(folder: Folder) -> int:
         size += file.size
     return size
 
+
 def buildName(parentFolder: Folder, folder: Folder) -> str:
     return (parentFolder.name if parentFolder.name != "/" else "") + "/" + folder.name
             
@@ -105,7 +107,7 @@ def task_2():
                     smallestSpace = space
              
         return smallestSpace
-        
+   
 
 print("Task 1:", task_1())
 print("Task 2:", task_2())
