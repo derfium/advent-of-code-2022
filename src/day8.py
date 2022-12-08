@@ -5,21 +5,13 @@ def task_1():
     with open("resources/inputFiles/input8.txt") as f:
         lines = f.read().splitlines()
         treeLines = [list(map(int, line)) for line in lines]
-        print(type(treeLines[0][1]))
         
-        treeCount = 0
-        
-        fromLeft = isTreeVisibleFromOutside(treeLines)
-                
-        
-        return fromLeft
+        return isTreeVisibleFromOutside(treeLines)       
 
-    
-    return None
 
 def isTreeVisibleFromOutside(trees):
     treeCounter = 0
-    visibility = [[False for i in trees[0]] for j in trees]
+    visibility = [[False for _ in trees[0]] for j in trees]
     
     for i in range(len(trees)):
         lineHeight = -1
@@ -64,12 +56,10 @@ def isTreeVisibleFromOutside(trees):
 def calculateVisibility(iTree, jTree, trees):
     treeHeight = int(trees[iTree][jTree])
     overallTrees = 0
-    #visibility = [[0 for i in trees[0]] for j in trees]
     visibileTrees = 0
     for i in reversed(range(0, iTree)):
         currentHeight = int(trees[i][jTree])
         visibileTrees += 1
-        #visibility[i][jTree] = 1
         if currentHeight >= treeHeight:
             break
             
@@ -78,9 +68,7 @@ def calculateVisibility(iTree, jTree, trees):
 
     for i in range(iTree + 1, len(trees[0])):
         currentHeight = int(trees[i][jTree])
-        print(currentHeight)
         visibileTrees += 1
-        #visibility[i][jTree] = 2
         if currentHeight >= treeHeight:
             break
             
@@ -90,7 +78,6 @@ def calculateVisibility(iTree, jTree, trees):
     for j in reversed(range(0, jTree)):
         currentHeight = int(trees[iTree][j])
         visibileTrees += 1
-        #visibility[iTree][j] = 3
         if currentHeight >= treeHeight:
             break
             
@@ -100,14 +87,10 @@ def calculateVisibility(iTree, jTree, trees):
     for j in range(jTree + 1, len(trees)):
         currentHeight = int(trees[iTree][j])
         visibileTrees += 1
-        #visibility[iTree][j] = 4
         if currentHeight >= treeHeight:
             break
-            
+                    
     overallTrees *= visibileTrees
-    
-    #visibility[iTree][jTree] = 9
-
 
     return overallTrees
     
@@ -133,11 +116,10 @@ def task_2():
         for i in range(len(lines)):
             for j in range(len(lines[0])):
                 currentTrees = calculateVisibility(i, j, lines)
-                #print(currentTrees)
                 if currentTrees > maxTrees:
                     maxTrees = currentTrees
                     
         return maxTrees
         
-#print("Task 1:", task_1())
+print("Task 1:", task_1())
 print("Task 2:", task_2())
